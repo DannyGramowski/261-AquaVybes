@@ -1,0 +1,41 @@
+<h2>Your Cart:</h2>
+<ul class="cart">
+    <li *ngFor="let aqua of cartAquas">
+        <a routerLink="/product_detail/{{aqua.id}}" class="indiv">
+            <span class="badge">{{aqua.id}}</span> <span class="restOfBadge" >{{aqua.packSize}} </span> <span class="restOfBadge">{{ get_flavor_string(aqua.flavors)}}</span> <span class="restOfBadge">{{aqua.name}}</span>
+        </a>
+        <button type="button" (click)="removeFromCart(aqua)">Remove</button>
+    </li>
+    <br>
+    <br>
+    <li *ngFor="let pack of packAquas">
+        <ul>
+            <h3>pack {{-1 * pack[0].orderID}}</h3>
+            <li *ngFor="let aqua of pack">
+                <div class="indiv">
+                    <span class="badge">{{aqua.id}}</span><span class="restOfBadge">{{aqua.packSize}}</span><span class="restOfBadge">{{get_flavor_string(aqua.flavors)}}</span><span class="restOfBadge">{{aqua.name}}</span>
+                </div>
+            </li>
+            <button type="button" (click)="deletePack(pack[0].orderID)">Delete Pack</button>
+          </ul>
+    </li>
+
+    <button type="button" (click)="openPastOrders()">Show Past Orders</button>
+
+    <ul class="pastOrders" *ngIf="showPastOrders">
+        <li *ngFor="let aqua of pastOrderAquas">
+            <a routerLink="/product_detail/{{aqua.id}}" class="indiv">
+                <span class="badge">{{aqua.id}}</span> <span class="restOfBadge">{{aqua.packSize}} </span> <span class="restOfBadge">{{ get_flavor_string(aqua.flavors)}}</span> <span class="restOfBadge"> {{aqua.name}}</span>
+            </a>
+            <button type="button" (click)="addToCart(aqua)">Add To Cart</button>
+        </li>
+        <button type="button" (click)="closePastOrders()">Close</button>
+
+    </ul>        
+    <br>
+    <button type="button" class="checkout-button" (click)="checkOut()">check out</button>
+    <h3>Total: ${{cost}}</h3>    
+</ul>
+
+
+

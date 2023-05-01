@@ -1,0 +1,37 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<main>
+    <img class="Background" [src] ="ImagePath2" alt="Background">
+    <header>
+        <div class="title">
+            <div class="titleWords">
+                <h1>Aqua Vybes</h1>
+                <h2>A Premium Water Experience</h2>
+            </div>
+            <img [src] ="ImagePath" alt="Wave Logo">
+        </div>
+        <div class="signInStatus">
+            <h3 *ngIf="!isSignedIn">Please Sign In</h3>
+            <h3 *ngIf="isSignedIn">Welcome {{getUser}}</h3>
+            <button type="button" *ngIf="isSignedIn" (click)="signOut()">Sign Out</button>
+        </div>
+        
+    </header>
+    <body>
+        <nav>
+            <div *ngIf="isSignedIn">
+                <a *ngIf="!isAdmin" routerLink="/create_aqua" (click)="setToCreateAqua()">Create Aqua</a>
+                <!-- <a routerLink="/aquas">Inventory        </a> -->
+                <a routerLink="/flavors">Flavors</a>
+                <a *ngIf="!isAdmin" routerLink="/cart/">Cart</a>
+                <a routerLink="/pack/">Pack</a>
+                
+            </div>
+        </nav>
+
+        <router-outlet></router-outlet>
+        <app-notification></app-notification>
+    </body>
+</main>
+

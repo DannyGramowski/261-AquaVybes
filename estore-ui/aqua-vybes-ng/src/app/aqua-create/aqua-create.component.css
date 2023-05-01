@@ -1,0 +1,68 @@
+.FormContent {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: block;
+    justify-content:space-around;
+    width:100%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+/*first decision screen*/
+.makeYourCall {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 300px;
+    justify-content: space-around;
+    box-shadow: 1px black;
+}
+    .makeYourCall > button {
+        display:block;
+        width: 50%;
+        height: 100%;
+        margin: 2%;
+        border: 2px black solid;
+        
+    }
+    .makeYourCall > button:hover {
+        /* background-color: darkgrey; */
+        box-shadow: -3px 3px black;
+
+    }
+
+
+
+
+
+
+
+h2 {
+    justify-self: center;
+    color: #369;
+    margin-top: -10px;
+}
+h3 {
+    font-size: larger;
+    justify-self: center;
+    color: #369;
+}
+.flavorOptions {
+    display: grid;
+    padding-left: 0%;
+    align-items: center;
+}
+
+button {
+
+    padding: .5em;
+    margin: 10px;
+    margin-top: 2%;
+    font-size: larger;
+    border-radius: .5rem;
+    border: 1px;
+    background-color: white;
+    color: #369;
+}

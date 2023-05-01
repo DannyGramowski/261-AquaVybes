@@ -1,0 +1,8 @@
+<h2>Inventory</h2>
+<ul class="aquas">
+    <li *ngFor="let aqua of aquas">
+        <a routerLink="/product_detail/{{aqua.id}}">
+            <span class="badge">{{aqua.id}}</span> {{aqua.name}}
+        </a>
+    </li>
+</ul>

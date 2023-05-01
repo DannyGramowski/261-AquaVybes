@@ -1,0 +1,19 @@
+<div *ngIf="aqua">
+    <h2>{{aqua.name | uppercase}}</h2>
+    <div id="product-details">
+            <span>ID: </span>{{aqua.id}} <br>
+            <span>Price: $612.96</span> <br>
+            <span>Description:</span>
+            <li *ngFor= "let flavor of aqua.flavors"> 
+                <span>{{flavor.description}}</span>
+            </li> <br>
+            <span>Name: {{get_flavor_string(aqua.flavors)}}</span> <br>
+            <span>Size: </span>{{aqua.packSize}} <br>
+    </div>
+
+    <nav>
+        <button type="button" (click)="goBack()">go back</button>
+        <button type="button" (click)="addToCart(aqua)">Add to Cart</button>
+        <button type="button" *ngIf="isAdmin" routerLink="/edit_aqua/{{aqua.id}}">Edit id {{aqua.id}}</button>
+    </nav>
+</div>

@@ -1,0 +1,68 @@
+<div class="FormContent">
+    <h2>Create Your Aqua:</h2>
+    <div class="makeYourCall" *ngIf="!isDecisionMade">
+        <button type="button" (click)="iChooseLoad(true)">Load it from code</button>
+        <button type="button" (click)="iChooseLoad(false)">Build it yourself</button>
+    </div>
+    <div class="loadFromCode" *ngIf="isDecisionMade && isDecisionLoad">
+        <form>
+                <button for="load-button" type=submit (click)="loadCode()">Load from code</button>
+                <input id="load-button" placeholder="Aqua Code" [(ngModel)]="aquaCode" maxlength="32" [ngModelOptions]="{standalone: true}">
+        </form>
+        <button type="button" (click)="resetAquaBuild()">Go Back</button>
+    </div>
+    <div class="createYourOwn" *ngIf="isDecisionMade && !isDecisionLoad">
+        <form>
+            <div class="form-group">
+                <div>
+                    <label for="name">Name: </label>
+                    <input name="name" [(ngModel)]="aqua.name" maxlength="32">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h3>Customize Your Flavors:</h3>
+                <div *ngFor="let flavor of flavorList" class="flavorOptions">
+                    <div class="option">
+                        <label for="flavor-{{flavor.flv.name}}">{{getFlavorString(flavor.flv)}} </label>
+                        <input id="flavor-{{flavor.flv.name}}" [(ngModel)]="flavor.val" [ngModelOptions]="{standalone: true}" type="checkbox" (change)="setPackSizes()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" *ngIf="showPackSizeField()">
+                <h3>Choose Your Pack Size:</h3>
+                <div>
+                    <label for="packSize">Pack Size: </label>
+                    <select name="packSize" [(ngModel)]="aqua.packSize">
+                        <option disabled>Select Pack Size</option>
+                        <option *ngFor="let size of packSizeList" value="{{size}}">
+                            {{getSizeString(size)}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <nav>
+            <div *ngIf="showPackSizeField()"> <!-- we are in create aqua for cart -->
+                <button type="submit" [disabled]="!valid()" (click)="submit()">Add To Cart</button>
+            </div>
+            <div *ngIf="!showPackSizeField()"> <!-- we are in create aqua for cart -->
+                <button type="submit" [disabled]="!valid()" (click)="submit()">Add To Pack</button>
+            </div>
+
+            <button type="submit" [disabled]="!valid()" (click)="getCode()">Get Aqua Code</button>
+            </nav>
+            <div *ngIf="!valid()">
+                <h2>you can only have 6 items in your pack</h2>
+            </div>
+        </form>
+
+        <div *ngIf="this.aquaCode != null">
+            <label for="code">Generate This Aqua's Code:</label>
+            <input disabled value="{{this.aquaCode}}">
+        </div>
+        <button type="button" (click)="resetAquaBuild()">Go Back</button>
+    </div>
+
+</div>

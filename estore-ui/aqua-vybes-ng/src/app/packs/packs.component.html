@@ -1,0 +1,26 @@
+<h2>Pack {{packID}}:</h2>
+<ul class="pack">
+    <!-- put create aqua component here. also change how submit
+         works so it sends it to cart or packs -->
+    <div class="create-menu" *ngIf="showCreateMenu">
+        <app-aqua-create></app-aqua-create>
+        <button class="close-menu" (click)="closeCreateMenu()">Close</button>
+    </div>    
+    <div *ngIf="!showCreateMenu">
+        <button class="add-new-aqua" (click)="createAqua()">Create New Aqua</button>
+    </div>
+    
+    <li *ngFor="let aqua of pack">
+        <a routerLink="/product_detail/{{aqua.id}}">
+            <span class="badge">{{aqua.id}}</span>  
+            <span>{{ get_flavor_string(aqua.flavors)}}</span> {{aqua.name}}
+        </a>
+        <button type="button" (click)="removeFromPack(aqua)">Remove</button>
+        <button type="button" (click)="editAqua(aqua)">Edit</button>
+    </li>
+    <br>
+    <div *ngIf="submitPackValid()">
+        <button class="add pack to cart" (click)="submitPack()">Add Pack To Cart</button>
+    </div>
+    
+</ul>

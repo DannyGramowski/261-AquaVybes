@@ -1,0 +1,190 @@
+/**************************************Background Image************************************/
+.Background {
+  position: absolute;
+  background-size:cover; 
+  width: 100%;
+  height: 100%;
+
+  top: -20px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  z-index: -1;
+}
+/**************************************Header/Title Bar************************************/
+header {    
+  display:flex;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  padding-right: 3.5%;
+  padding-left: 2%;
+  margin-top: -35px;
+  background-color: none;
+
+  align-items: center;
+}   
+  /*********************************Title and Logo********************************/
+  .title {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding-right: 2%;
+    width:max-content;
+    overflow:visible;
+  }
+  .titleWords {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-top: -8px;
+  }
+  h1 {
+      width:max-content;
+      align-self: center;
+      /* color: rgb(13, 153, 230); */
+      color: rgb(14, 140, 208); /*Perfect match visually*/
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-left: .15em;
+      padding-right: 2.5%;
+      font-size:xxx-large;
+      justify-self: center;
+      padding-left: auto;
+
+      white-space: nowrap;
+
+      margin-bottom: -8px;
+  }
+  h2 {
+      font-size:large;
+      white-space: nowrap;
+      color: rgb(101, 184, 236);
+      font-family: Arial, Helvetica, sans-serif;
+
+  }
+  img {
+    margin-top: 20px;
+    height: 120px;
+  }
+  /*************************Sign In Status and Sign Out***************************/
+  .signInStatus {
+    display: flex;
+    float: right;
+    margin-left: auto;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+  }
+    .signInStatus > button {
+      margin-left: 10%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: medium;
+      background-color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: black;
+      font-size: 1.2rem;
+      padding: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+    .signInStatus > button:hover {
+      background-color: black;
+      color: white;
+    }
+    .signInStatus > h3 {
+      color: #444;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: lighter;
+    }
+
+/**************************************Nav Bar************************************/
+nav {
+  display: flex;
+  margin-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  width: max-content;
+  justify-content: space-around;
+}
+  nav a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: none;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  nav a:hover {
+    background-color: #aaa;
+    padding: .5rem 1rem;
+  }
+  nav a:active {
+    color: white;
+    background-color: black;
+    padding: .5rem 1rem;
+  }
+
+
+body > h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+body, input[type="text"], button {
+
+  font-family: Cambria, Georgia, serif;
+}
+
+
+
+button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+  
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+  

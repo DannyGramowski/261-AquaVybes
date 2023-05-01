@@ -1,0 +1,37 @@
+<div *ngIf="isAdmin">
+    <form (ngSubmit)="submit()">
+
+        <div class="form-group">
+            <h3>Aqua (Id: {{aqua.id}}) information:</h3>
+            <div>
+                <label for="name">Name: </label>
+                <input name="name" [(ngModel)]="aqua.name" maxlength="32">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h3>Flavors:</h3>
+            <div *ngFor="let flavor of flavorList">
+                <label for="flavor-{{flavor.flv.name}}">{{getFlavorString(flavor.flv)}} </label>
+                <input id="flavor-{{flavor.flv.name}}" [(ngModel)]="flavor.val" [ngModelOptions]="{standalone: true}" type="checkbox">
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <h3>Details:</h3>
+            <div>
+                <label for="packSize">Pack Size: </label>
+                <select name="packSize" [(ngModel)]="aqua.packSize">
+                    <option disabled>Select Pack Size</option>
+                    <option *ngFor="let size of packSizeList" value="{{size}}">{{getSizeString(size)}}</option>
+                </select>
+            </div>
+        </div>
+
+        <nav>
+            <button type="button" (click)="delete()">Delete {{id}}</button>
+            <button type="submit">Submit</button>
+        </nav>
+    </form>
+    
+</div>

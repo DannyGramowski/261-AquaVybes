@@ -1,0 +1,34 @@
+<h2>Flavors:</h2>
+
+<div *ngIf="isAdmin">
+    <label for="new-flavor">Flavor name: </label>
+    <input id="new-flavor" #flavorName maxlength="32"/>
+
+    <button type="button" class="add-button" (click)="add(flavorName.value);
+     flavorName.value=''">Add flavor</button>
+</div>
+
+<div id="search-component">
+    <label for="search-box">Aqua Search</label>
+    <input #searchBox id="search-box" (keyup.enter)="searchFlavors(searchBox.value)" maxlength="32" />
+    <button class="search-button" type="button" (click)="searchFlavors(searchBox.value)">search</button>
+    <ul class="search-result">
+      <div *ngIf="searchedFlavors.length == 0">No Results Found</div>
+      <li *ngFor="let flavor of searchedFlavors" >
+        <a routerLink="/flavor_detail/{{flavor.id}}">
+          <div class="flavorBox">
+            <span class="badge">{{flavor.quantity}}</span> {{flavor.name}}
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+<ul class="flavors">
+    <li *ngFor="let flavor of flavors">
+        <a routerLink="/flavor_detail/{{flavor.id}}" class="indiv">
+            <span class="badge">{{flavor.quantity}}</span> <span class="restOfBadge">{{flavor.name}}</span>
+        </a>
+        <button *ngIf="isAdmin" type="button" class="delete" title="delete flavor" (click)="delete(flavor)">x</button>
+    </li>
+</ul>

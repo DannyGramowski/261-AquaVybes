@@ -1,0 +1,108 @@
+/* reused from tour of heroes */
+.cart {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }
+  
+  .cart li {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cart li:hover {
+    left: .1em;
+  }
+  
+  .cart a {
+    color: #333;
+    text-decoration: none;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+  }
+  
+  .cart a:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+  }
+  
+  .cart a:active {
+    background-color: #525252;
+    color: #fafafa;
+  }
+  
+  .cart .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #405061;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    min-width: 16px;
+    text-align: right;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+
+  button {
+    margin-top: 20px;
+    margin-right: .5rem;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }
+
+  .indiv {
+    display: flex;
+    white-space: nowrap;
+    width: fit-content;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 300px;
+    align-content: center;
+    padding: 3px;
+    padding-top: 6px;
+    margin: 3px;
+  }
+    .indiv > .badge {
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .indiv > .restOfBadge {
+      align-self: center;
+      justify-self: start;
+    }
+
+
+h2 {
+  justify-self: center;
+  color: #369;
+  margin-top: 39px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.checkout-button {
+  float: left;
+}

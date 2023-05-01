@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.estore.api.estoreapi.model.aqua.Aqua</OriginalElement>
+  <nodes>
+    <node x="3118.8308564659856" y="-258.4201348028307">com.estore.api.estoreapi.persistence.flavor.FlavorFileDAO</node>
+    <node x="2443.5761777677253" y="73.91915867349266">com.estore.api.estoreapi.model.aqua.PackSize</node>
+    <node x="737.7837492622702" y="-355.73815669145415">com.estore.api.estoreapi.persistence.user.UserSerializer</node>
+    <node x="3118.8308564659856" y="-522.0549174115264">com.estore.api.estoreapi.persistence.flavor.FlavorDAO</node>
+    <node x="1298.2967444127844" y="-507.6377446377881">com.estore.api.estoreapi.persistence.aqua.AquaSerializer</node>
+    <node x="742.2837492622702" y="-162.94376963710016">com.estore.api.estoreapi.persistence.user.UserDeserializer</node>
+    <node x="1722.2914111437813" y="-488.36250999452494">com.estore.api.estoreapi.persistence.aqua.AquaFileDAO</node>
+    <node x="119.64796707850883" y="-547.3253580145656">com.estore.api.estoreapi.persistence.user.UserFileDAO</node>
+    <node x="2285.5346705213487" y="-488.36250999452494">com.estore.api.estoreapi.persistence.aqua.AquaDAO</node>
+    <node x="-636.2457412019526" y="-547.3253580145656">com.estore.api.estoreapi.persistence.user.UserDAO</node>
+    <node x="252.47695258575527" y="81.22369793590138">com.estore.api.estoreapi.model.user.User</node>
+    <node x="2909.491385458404" y="-110.22500201634098">com.estore.api.estoreapi.model.flavor.Flavor</node>
+    <node x="3501.8429564928215" y="-241.9364149200593">com.estore.api.estoreapi.persistence.flavor.FlavorSerializer</node>
+    <node x="1723.7914111437815" y="-150.22369715491314">com.estore.api.estoreapi.model.aqua.Aqua</node>
+    <node x="1303.2967444127844" y="-398.8679171856101">com.estore.api.estoreapi.persistence.aqua.AquaDeserializer</node>
+    <node x="3529.5212173623872" y="-165.42013480283072">com.estore.api.estoreapi.persistence.flavor.FlavorDeserializer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.estore.api.estoreapi.persistence.aqua.AquaDeserializer" target="com.estore.api.estoreapi.model.flavor.Flavor" relationship="CREATE">
+      <point x="73.74809364606449" y="18.362882620975086" />
+      <point x="1541.0448380588489" y="-249.71826086956492" />
+      <point x="3005.991217391305" y="-249.71826086956492" />
+      <point x="-1.6806709902539296E-4" y="-126.000389288007" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserFileDAO" target="com.estore.api.estoreapi.model.user.User" relationship="CREATE">
+      <point x="-192.42824288505858" y="269.50045546563047" />
+      <point x="171.71972419345025" y="299.5988390585518" />
+      <point x="-71.14650594718137" y="15.375141122650405" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.flavor.FlavorFileDAO" target="com.estore.api.estoreapi.model.flavor.Flavor" relationship="TO_MANY">
+      <point x="31.864474439226797" y="85.75789360631245" />
+      <point x="3298.6953309052124" y="-2.5076847826096014" />
+      <point x="93.27060825271019" y="-18.28268276626862" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.aqua.AquaFileDAO" target="com.estore.api.estoreapi.model.aqua.Aqua" relationship="TO_MANY">
+      <point x="44.95173569188955" y="82.9895574704666" />
+      <point x="1947.2431468356708" y="-182.41960890346564" />
+      <point x="1949.2312665620477" y="-182.41960890346564" />
+      <point x="46.939855418266234" y="-179.85590073957997" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.model.user.User" target="com.estore.api.estoreapi.model.aqua.Aqua" relationship="TO_MANY">
+      <point x="145.50015355054893" y="-163.3684022837274" />
+      <point x="1378.474625189296" y="120.855295652174" />
+      <point x="1378.474625189296" y="-15.072820289854974" />
+      <point x="1900.7914111437813" y="-15.072820289854974" />
+      <point x="1900.7914111437813" y="-129.984872671578" />
+      <point x="1763.5525962037887" y="-129.984872671578" />
+      <point x="-138.73881493999284" y="0.6205362134647032" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.aqua.AquaSerializer" target="com.estore.api.estoreapi.model.flavor.Flavor" relationship="CREATE">
+      <point x="171.32865364608142" y="-19.745998332645684" />
+      <point x="3048.8771803197064" y="-500.3837429704338" />
+      <point x="42.88579486130266" y="-39.15093323235128" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.flavor.FlavorDeserializer" target="com.estore.api.estoreapi.model.flavor.Flavor" relationship="CREATE">
+      <point x="3.3611594912486E-4" y="26.99965040311747" />
+      <point x="3695.5215534783365" y="43.89604146191988" />
+      <point x="3066.3475100154396" y="43.89604146191988" />
+      <point x="60.356124557035855" y="120.02813245112361" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.aqua.AquaDeserializer" target="com.estore.api.estoreapi.model.aqua.Aqua" relationship="CREATE">
+      <point x="-55.50845687655237" y="-0.3186242636651855" />
+      <point x="1361.6727976811594" y="-372.1865414492753" />
+      <point x="1361.6727976811594" y="-226.54432944507732" />
+      <point x="1846.253137281999" y="-226.54432944507732" />
+      <point x="-56.0382738617825" y="-173.12188780971925" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.model.user.User" target="com.estore.api.estoreapi.model.aqua.Aqua" relationship="CREATE">
+      <point x="145.50015355054893" y="-4.0228372733963624E-4" />
+      <point x="1065.0" y="284.22329565217404" />
+      <point x="1065.0" y="284.2236979359014" />
+      <point x="1473.0" y="284.2236979359014" />
+      <point x="1473.0" y="71.92181445565586" />
+      <point x="-160.4310669052336" y="41.145511610569" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.aqua.AquaFileDAO" target="com.estore.api.estoreapi.model.aqua.Aqua" relationship="CREATE">
+      <point x="-19.52490679596849" y="101.67479695104407" />
+      <point x="1882.7665043478128" y="-217.08041771130695" />
+      <point x="1884.4991239049143" y="-217.08041771130695" />
+      <point x="-17.792287238867175" y="-183.60260098305778" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.flavor.FlavorFileDAO" target="com.estore.api.estoreapi.model.flavor.Flavor" relationship="CREATE">
+      <point x="3.292149125400101E-5" y="92.99972175935227" />
+      <point x="3266.830889387477" y="-50.94255434782558" />
+      <point x="3266.8308564659856" y="-50.94255434782558" />
+      <point x="3266.8308564659856" y="-29.464695652175408" />
+      <point x="92.78603760053466" y="-45.23969363583443" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserDeserializer" target="com.estore.api.estoreapi.model.aqua.Aqua" relationship="CREATE">
+      <point x="156.95479778209733" y="21.218751304348473" />
+      <point x="1392.3733668008651" y="-103.72501833275169" />
+      <point x="1392.3733668008651" y="-103.01953279071904" />
+      <point x="-174.01643038352017" y="-133.7958356358059" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserFileDAO" target="com.estore.api.estoreapi.model.user.User" relationship="TO_MANY">
+      <point x="128.40305927020972" y="247.84506663833497" />
+      <point x="492.55102634871855" y="44.99299369890349" />
+      <point x="492.0069042385551" y="44.99299369890349" />
+      <point x="94.02995165279981" y="-201.81493623386856" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserDeserializer" target="com.estore.api.estoreapi.model.flavor.Flavor" relationship="CREATE">
+      <point x="3.9929321826548403E-4" y="-38.000356815334726" />
+      <point x="904.2841485554885" y="-197.5942028985496" />
+      <point x="2934.855462986371" y="-197.5942028985496" />
+      <point x="-71.13592247203269" y="-129.0336047222072" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserFileDAO" target="com.estore.api.estoreapi.model.aqua.Aqua" relationship="CREATE">
+      <point x="231.72332361803342" y="212.94319533398487" />
+      <point x="1473.0" y="-64.88216268058073" />
+      <point x="1473.0" y="-66.07687771825533" />
+      <point x="-96.55602458641897" y="-96.85318056334219" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.model.aqua.Aqua" target="com.estore.api.estoreapi.model.flavor.Flavor" relationship="TO_MANY">
+      <point x="181.36631201652835" y="-15.576322916971918" />
+      <point x="2088.8312350443675" y="15.199979928114942" />
+      <point x="2088.8312350443675" y="15.77460869565202" />
+      <point x="96.49983193290097" y="-3.892880069997773E-4" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserSerializer" target="com.estore.api.estoreapi.model.aqua.Aqua" relationship="CREATE">
+      <point x="166.50039131743995" y="1.79879859842913E-4" />
+      <point x="1178.1454933333332" y="-328.7379768115943" />
+      <point x="1178.1454933333332" y="-128.75684818408604" />
+      <point x="1509.1890599719138" y="-128.75684818408604" />
+      <point x="1509.1890599719138" y="-129.23690090666105" />
+      <point x="-151.37415791975218" y="-160.0132037517479" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.model.aqua.Aqua" target="com.estore.api.estoreapi.model.aqua.PackSize" relationship="TO_ONE">
+      <point x="166.82317137884843" y="105.68365969172552" />
+      <point x="2088.8312350443675" y="136.45996253681238" />
+      <point x="2088.8312350443675" y="136.45996253681238" />
+      <point x="-94.93149437553029" y="-52.959196136680276" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.flavor.FlavorFileDAO" target="com.estore.api.estoreapi.persistence.flavor.FlavorDeserializer" relationship="CREATE">
+      <point x="-148.0" y="0.0" />
+      <point x="3298.819618023321" y="-165.42013480283072" />
+      <point x="3298.819618023321" y="-145.86086956521825" />
+      <point x="3587.164798471522" y="-145.86086956521825" />
+      <point x="3587.164798471522" y="-165.42013480283072" />
+      <point x="0.0" y="-27.0" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.aqua.AquaFileDAO" target="com.estore.api.estoreapi.persistence.aqua.AquaDeserializer" relationship="CREATE">
+      <point x="-172.5" y="104.0" />
+      <point x="1729.7914111437813" y="-365.75324402484983" />
+      <point x="1586.6334595276821" y="-365.75324402484983" />
+      <point x="119.33671511489774" y="-27.0" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserFileDAO" target="com.estore.api.estoreapi.persistence.user.UserDAO" relationship="REALIZATION">
+      <point x="-239.7498040434216" y="-22.57240741063987" />
+      <point x="66.23033634879937" y="-300.3977654252055" />
+      <point x="66.23033634879937" y="-300.3253580145656" />
+      <point x="-244.5" y="0.0" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.aqua.AquaFileDAO" target="com.estore.api.estoreapi.persistence.aqua.AquaDAO" relationship="REALIZATION">
+      <point x="180.0" y="96.5" />
+      <point x="2010.1941236859805" y="-287.86250999452494" />
+      <point x="2010.1941236859805" y="-435.68744245763395" />
+      <point x="-180.0" y="-51.32493246310901" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.aqua.AquaFileDAO" target="com.estore.api.estoreapi.persistence.aqua.AquaSerializer" relationship="CREATE">
+      <point x="-120.81928360755637" y="-5.5780726141722425" />
+      <point x="1781.472127536225" y="-467.6090462374676" />
+      <point x="127.07871065967242" y="13.02869840032048" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserFileDAO" target="com.estore.api.estoreapi.persistence.user.UserDeserializer" relationship="CREATE">
+      <point x="232.67668245861546" y="152.88158837746545" />
+      <point x="-162.0" y="0.0" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.flavor.FlavorFileDAO" target="com.estore.api.estoreapi.persistence.flavor.FlavorSerializer" relationship="CREATE">
+      <point x="-101.40513677426145" y="93.0" />
+      <point x="3165.425719691724" y="-196.73235094840174" />
+      <point x="3672.8429564928215" y="-196.73235094840174" />
+      <point x="0.0" y="-27.0" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserFileDAO" target="com.estore.api.estoreapi.persistence.user.UserSerializer" relationship="CREATE">
+      <point x="238.2627694151372" y="-50.07957104282434" />
+      <point x="693.8245835648277" y="-327.90492905738995" />
+      <point x="693.8245835648277" y="-328.73815669145415" />
+      <point x="904.2837492622702" y="-328.73815669145415" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.flavor.FlavorFileDAO" target="com.estore.api.estoreapi.persistence.flavor.FlavorDAO" relationship="REALIZATION">
+      <point x="0.0" y="-93.0" />
+      <point x="3266.8308564659856" y="-429.0549174115264" />
+      <point x="148.0" y="0.0" />
+    </edge>
+    <edge source="com.estore.api.estoreapi.persistence.user.UserDeserializer" target="com.estore.api.estoreapi.model.user.User" relationship="CREATE">
+      <point x="-110.52957624688509" y="16.415290720898895" />
+      <point x="793.7541730153852" y="199.40678340637788" />
+      <point x="143.4039218789054" y="-84.8169145295235" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.164921935508409" showDependencies="true" x="799.5691522782627" y="-19.40469333333334" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

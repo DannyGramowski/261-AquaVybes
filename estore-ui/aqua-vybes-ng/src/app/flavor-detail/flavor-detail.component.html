@@ -1,0 +1,23 @@
+<div *ngIf="flavor">
+    <h2>{{flavor.name | uppercase}} Details</h2>
+    <div *ngIf="isAdmin"><span>Id: </span>{{flavor.id}}</div> <br>
+    
+    <div>
+        <label for="flavor-name">Flavor Name: </label>
+        <input *ngIf="isAdmin" id="flavor-name" [(ngModel)]="flavor.name" placeholder="flavor name" maxlength="32">
+        <label *ngIf="!isAdmin" id="flavor-name">{{flavor.name}}</label>
+        <br>
+
+        <label for="flavor-description">Flavor Description: </label>
+        <input *ngIf="isAdmin" id="flavor-description" [(ngModel)]="flavor.description" placeholder="flavor description" maxlength="64">
+        <label *ngIf="!isAdmin" id="flavor-description">{{flavor.description}}</label>
+        <br>
+
+        <label for="flavor-quantity">Flavor Quantity: </label>
+        <input *ngIf="isAdmin" id="flavor-quantity" [(ngModel)]="flavor.quantity" type="number" min="0">
+        <label *ngIf="!isAdmin" id="flavor-quantity">{{flavor.quantity}}</label>
+        <br>
+    <button type="button" (click)="goBack()">go back</button>
+    <button *ngIf="isAdmin" type="button" (click)="save()">save</button>
+</div>
+
